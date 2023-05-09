@@ -1,6 +1,8 @@
 :root {
+  --primary-dark-clr: #333;
   --background-clr: #eaeaea;
   --logo-background-clr: rgb(0, 0, 0, .6);
+  --label-clr: rgba(51, 51, 51, 0.9);
 }
 
 *, *::before, *::after {
@@ -56,17 +58,57 @@ body {
 
 .img-author {
   position: absolute;
-  bottom: 5px;
+  bottom: .75rem;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
+  color: var(--primary-dark-clr)
 }
 
 .img-author a:link,
 .img-author a:visited {
-  color: #000;
+  color: var(--primary-dark-clr);
 }
 
 .right {
   flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-text {
+  width: 80%;
+  padding-left: 2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--primary-dark-clr);
+}
+
+.info-text > p:last-child {
+  margin-top: 1rem;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid #333;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  background-color: #fff;
+  padding: 2rem;
+  margin-top: 3rem;
+  box-shadow: 0 4px 4px -4px gray;
+}
+
+.form .span-2 {
+  grid-column: span 2;
+}
+
+form label {
+  display: block;
+  color: var(--label-clr);
 }
