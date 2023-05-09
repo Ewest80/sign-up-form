@@ -1,5 +1,6 @@
 :root {
   --background-clr: #eaeaea;
+  --logo-background-clr: rgb(0, 0, 0, .6);
 }
 
 *, *::before, *::after {
@@ -30,26 +31,40 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  position: relative;
 }
 
 .logo {
   width: 100%;
-  height: 15vh;
+  height: 10rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgb(0, 0, 0, .4);
-  margin-top: 2vh;
+  background: var(--logo-background-clr);
+  margin-top: 1rem;
 }
 
 .norse-text {
   font-family: Norse, Arial, Helvetica, sans-serif;
+  color: #fff;
   font-size: 6.5rem;
 }
 
 .logo .odin-img {
   height: 80%;
-  width: auto;
+}
+
+.img-author {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.img-author a:link,
+.img-author a:visited {
+  color: #000;
 }
 
 .right {
