@@ -82,8 +82,11 @@ body {
 .info-text {
   width: 80%;
   flex: 1 1 33%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   padding-left: 2rem;
-  padding-top: 7rem;
+  padding-top: 3rem;
   font-size: 1.4rem;
   line-height: 1.2;
   font-weight: 500;
@@ -109,8 +112,8 @@ input {
   grid-template-columns: repeat(2, minmax(19rem, 25rem));
   background-color: var(--form-background-clr);
   padding: clamp(1rem, 10vh, 2rem);
-  margin-top: 2.5rem;
   box-shadow: 0 4px 10px -2px gray;
+  position: relative;
 }
 
 .form .span-2 {
@@ -157,7 +160,10 @@ input:focus {
   padding-left: 2rem;
 }
 
-.account-login .btn {
+.btn {
+  position: absolute;
+  bottom: -6rem;
+  left: 2rem;
   width: 15rem;
   height: 3.75rem;
   border-radius: .5rem;
@@ -168,4 +174,30 @@ input:focus {
   font-size: 1.2rem;
   color: var(--form-background-clr);
   background-color: var(--primary-dark-clr);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.account-login p {
+  color: var(--primary-dark-clr);
+  font-size: 1.1rem;
+  margin-top: 4.5rem;
+}
+
+.account-login a {
+  text-decoration: none;
+  color: green;
+}
+
+.error {
+  border: 1px solid red;
+}
+
+.invalid-password {
+  display: none;
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 0.2rem;
 }
