@@ -195,9 +195,17 @@ input:focus {
   border: 1px solid red;
 }
 
-.invalid-password {
+.password-error {
+  position: absolute;
   display: none;
-  color: red;
   font-size: 0.8rem;
-  margin-top: 0.2rem;
+  color: red;
+}
+
+.password-requirements {
+  position: absolute;
+  top: 3.5rem;
+  display: none;
+  font-size: 0.8rem;
+  color: red;
 }
