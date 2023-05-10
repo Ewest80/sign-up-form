@@ -14,7 +14,7 @@
 
 @font-face {
   font-family: 'Norse';
-  src: url(/Norse-Bold.otf) format('truetype');
+  src: url(../Norse-Bold.otf) format('truetype');
 }
 
 body {
@@ -29,7 +29,7 @@ body {
 
 .hero {
   flex: 1 1 40%;
-  background-image: url('/images/design.jpg');
+  background-image: url('../images/design.jpg');
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
