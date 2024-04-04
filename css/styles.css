@@ -244,6 +244,27 @@ input {
   text-decoration: none;
 }
 
+/* Errors and Requirements */
+.error {
+  border: 1px solid red;
+}
+
+.password-error {
+  display: none;
+  font-size: 0.8rem;
+  color: red;
+  position: absolute;
+  top: 2.5rem;
+}
+
+.password-requirements {
+  display: none;
+  font-size: 0.8rem;
+  color: red;
+  position: absolute;
+  top: 3.5rem;
+}
+
 /* Container */
 .container {
   /*max-width: 1600px;*/

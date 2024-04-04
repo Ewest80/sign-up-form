@@ -51,11 +51,13 @@
               <label for="phone-number">Phone Number</label>
             </div>
             <div class="form-item">
-              <input type="password" name="password" id="password" required>
+              <input type="password" name="password" id="password" minlength="8" required>
               <label for="password">Password</label>
+              <div class="password-error">*Passwords do not match</div>
+              <div class="password-requirements">Must be 8 or more characters</div>
             </div>
             <div class="form-item">
-              <input type="password" name="confirm-password" id="confirm-password" required>
+              <input type="password" name="confirm-password" id="confirm-password" minlength="8" required>
               <label for="confirm-password">Confirm Password</label>
             </div>
           </div>
