@@ -3,6 +3,8 @@ const password = document.querySelector('#password');
 const confirmPassword = document.querySelector('#confirm-password');
 const passwordError = document.querySelector('.password-error');
 const passwordRequirements = document.querySelector('.password-requirements');
+const inputs = document.querySelectorAll('input');
+
 
 form.addEventListener('submit', (e) => {
     if (password.value !== confirmPassword.value) {
@@ -31,4 +33,15 @@ password.addEventListener('input', () => {
     else {
         passwordRequirements.style.color = 'green';
     }
+});
+
+inputs.forEach(input => {
+    input.addEventListener('blur', () => {
+        if (!input.checkValidity()) {
+            input.classList.add('error');
+        }
+        else {
+            input.classList.remove('error');
+        }
+    });
 });
