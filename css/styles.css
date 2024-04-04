@@ -102,12 +102,11 @@ textarea:not([rows]) {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  max-width: 100%;
   margin-top: 0;
 }
 
 .hero .logo img {
-  max-height: 6.25rem;
+  max-width: 6.25rem;
 }
 
 .hero .logo .logo-text {
@@ -194,7 +193,8 @@ textarea:not([rows]) {
   transition: all 0.2s ease-in-out;
 }
 
-input:focus + label {
+input:focus + label,
+input:valid + label {
   color: var(--primary-dark-clr);
   top: -0.75rem;
   font-size: 0.9rem;
@@ -208,14 +208,45 @@ input {
   padding: 0.25rem .5rem;
 }
 
+/* Account login */
 
 .account-login {
-
+  padding: 0 2rem;
 }
 
+.btn {
+  width: 15rem;
+  height: 3.75rem;
+  background-color: var(--primary-dark-clr);
+  color: var(--form-background-clr);
+  border: none;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.account-login p {
+  font-size: 1.1rem;
+  color: var(--primary-dark-clr);
+}
+
+.account-login a {
+  color: green;
+  text-decoration: none;
+}
 
 /* Container */
 .container {
+  /*max-width: 1600px;*/
   margin: 0 auto;
   display: flex;
   justify-content: center;
