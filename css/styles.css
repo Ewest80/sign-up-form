@@ -203,10 +203,17 @@ input:valid + label {
 input {
   border: 1px solid var(--input-border-clr);
   border-radius: 5px;
+  outline: none;
   font-size: 1.2rem;
   line-height: 1.5;
   padding: 0.25rem .5rem;
 }
+
+input:focus {
+  border: 1px solid #333;
+  box-shadow: 3px 3px 6px -2px gray;
+}
+
 
 /* Account login */
 
