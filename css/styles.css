@@ -11,6 +11,7 @@
   --form-background-clr: #fafafa;
   --logo-background-clr: rgb(0, 0, 0, .6);
   --label-clr: #555;
+  --input-border-clr: #e5e7eb;
 }
 
 /* Prevent font size inflation */
@@ -102,7 +103,7 @@ textarea:not([rows]) {
   gap: 1rem;
   padding: 1rem;
   max-width: 100%;
-  margin-top: 2rem;
+  margin-top: 0;
 }
 
 .hero .logo img {
@@ -129,16 +130,25 @@ textarea:not([rows]) {
   flex: 2;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100%;
+  gap: 3rem;
 }
 
-.sign-up-section .sign-up-header {
+.sign-up-section .sign-up-header,
+.sign-up-section .sign-up-form,
+.sign-up-section .account-login {
+  flex: 1;
+}
+
+.sign-up-header {
   font-size: 1.5rem;
   color: var(--primary-dark-clr);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.2;
+  padding: 0 2rem;
+}
+
+.sign-up-header p {
+  max-width: 60ch;
 }
 
 .sign-up-header p:nth-child(2) {
@@ -147,17 +157,69 @@ textarea:not([rows]) {
 
 .sign-up-section .sign-up-form {
   background-color: var(--form-background-clr);
+  color: var(--primary-dark-clr);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2rem;
+  box-shadow: 0 4px 10px -2px gray;
+}
+
+.sign-up-form .form-caption {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-dark-clr);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 6.25rem;
+  padding-top: 2rem;
+  width: 80%;
+}
+
+.form-group .form-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.form-item label {
+  color: var(--label-clr);
+  font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 0.5rem;
+  transform: translateY(-50%);
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus + label {
+  color: var(--primary-dark-clr);
+  top: -0.75rem;
+  font-size: 0.9rem;
+}
+
+input {
+  border: 1px solid var(--input-border-clr);
+  border-radius: 5px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding: 0.25rem .5rem;
+}
+
+
+.account-login {
+
 }
 
 
 /* Container */
 .container {
-  max-width: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
   height: 100vh;
 }
 
@@ -166,8 +228,4 @@ textarea:not([rows]) {
 @font-face {
   font-family: 'Norse';
   src: url('../Norse-Bold.otf');
-}
-
-.font-dark {
-  color: var(--primary-dark-clr);
 }
